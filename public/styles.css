@@ -1,0 +1,57 @@
+.container {
+  display:grid;
+  grid-template-columns: 1fr 4fr;
+}
+.sidebar {
+  grid-column: 1 / 2;
+  grid-row:1/3;
+  display:grid;
+  grid-template-rows: 10% 30% 20% 1fr;
+  gap: 20px
+}
+.sidebarList {
+  display: grid;
+  grid-template-rows: auto;
+  gap:20px;
+}
+.search {
+  width: 75%;
+}
+.header {
+  grid-column: 2/3;
+  display: grid;
+  grid-auto-flow: row;
+}
+.header-top {
+  display:grid;
+  grid-template-columns: 10% 3fr 10% 10% 10%;
+  gap: 10px;
+  grid-auto-flow: column;
+}
+.header-bottom {
+  display:grid;
+  grid-template-columns: 10% 3fr 1fr 1fr 1fr;
+  grid-auto-flow: column;
+}
+.header-bottom-profile {
+  justify-self: start;
+}
+.header-buttons {
+  display: grid;
+  grid-column: 3 / 6;
+  grid-auto-flow: column;
+  place-items: center;
+}
+.main {
+  grid-column: 2/3;
+  display:grid;
+  grid-template-columns: 3fr 1fr;
+  grid-template-rows: 3fr 2fr;
+}
+.projects-main {
+  grid-row: 1 / 3;
+}
+.projects-cards {
+  display:grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
