@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
   font-size: 14px;
 }
@@ -11,7 +15,7 @@ body {
   grid-column: 1 / 2;
   grid-row: 1/3;
   display: grid;
-  grid-template-rows: 10% 55% 20%;
+  grid-template-rows: 10% 300px 150px 1fr;
   gap: 20px;
   background-color: #0284C7;
   color: white;
@@ -57,6 +61,8 @@ svg {
 
 .search {
   width: 75%;
+  background-color: #dadde2;
+  border-color: #dadde2;
 }
 
 .header {
@@ -140,17 +146,37 @@ li {
   grid-column: 2/3;
   display: grid;
   grid-template-columns: 3fr 1fr;
-  grid-template-rows: 3fr 2fr;
-  background-color: #D1D5DB;
-  box-shadow: inset 0px 2px 4px 0px rgba(140, 140, 140, 0.76);
+  grid-template-rows: 1fr 2fr;
+  background-color: #dadde2;
+  box-shadow: inset 0px 2px 4px 0px rgba(140, 140, 140, 0.856);
 }
 
 .projects-main {
   grid-row: 1 / 3;
-
+  margin: 20px;
 }
 
 .projects-cards {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(800px, 1fr));
+  gap: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(375px, 1fr));
+  grid-template-rows: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.card {
+  width: 100%;
+  height: 300px;
+  border-radius: 15px;
+  background-color: white;
+  border-left: 10px solid gold;
+  border-top-left-radius: 10px;
+  display: grid;
+  padding: 15px;
+  grid-template-columns: 60% 10% 10% 10%;
+  grid-template-rows: 80% 1fr;
+}
+
+.cardicon {
+  grid-row: 2;
+  justify-self: end;
 }
